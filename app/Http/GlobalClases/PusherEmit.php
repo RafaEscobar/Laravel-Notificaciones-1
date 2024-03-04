@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Http\GlobalClases;
+
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;

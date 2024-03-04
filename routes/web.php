@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\GlobalClases\PusherEmit;
+use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nose', function(){
-    event(new PusherEmit('hello world'));
+Broadcast::channel('chat-room', function ($user) {
+    return true;
 });
