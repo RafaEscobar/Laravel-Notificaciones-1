@@ -23,12 +23,12 @@ Route::get('/', function () {
 Route::get('/nose', function(){
     $bodyNotification = [
         'title' => 'Bienvenido',
-        'message' => 'Felicidades, has decidido dar el paso a tener una mejor organozación.'
+        'message' => 'Felicidades, has decidido dar el paso a tener una mejor organozación.',
     ];
     $options = [
         'cluster' => 'us2',
         'useTLS' => false
-      ];
+    ];
     $pusher = new Pusher('6fd86908133de266a641', '3b49b1bb1067ba5d082f', '1766055', $options);
 
     $pusher->trigger('chat-room', 'PusherEvent', $bodyNotification);
